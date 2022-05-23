@@ -88,7 +88,7 @@ export default class result extends Component {
       console.log("search criteria: ", searchData);
       // axios.defaults.withCredentials = true;
       axios
-        .post(`http://127.0.0.1:5000/getData`, searchData)
+        .post(`http://54.82.2.141:5000/getData`, searchData)
         .then((response) => {
           console.log("response data from search flight is", response.data);
           this.setState({
@@ -218,11 +218,14 @@ export default class result extends Component {
                     Weekly Portfolio Trend
                   </h2>
                   <hr />
-                  <div style={{ width: "720px", height: "236px", marginLeft: "8%" }}>
-                    <Line
-                      data={data1}
-                      options={options}
-                    />
+                  <div
+                    style={{
+                      width: "720px",
+                      height: "236px",
+                      marginLeft: "8%",
+                    }}
+                  >
+                    <Line data={data1} options={options} />
                   </div>
                 </div>
               </div>
