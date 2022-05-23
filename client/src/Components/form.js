@@ -56,7 +56,7 @@ export default class Form extends Component {
       console.log("search criteria: ", searchData);
       // axios.defaults.withCredentials = true;
       axios
-        .post(`http://54.82.2.141:5000/getData`, searchData)
+        .post(`http://18.207.154.20:5000/getData`, searchData)
         .then((response) => {
           console.log("response data from search flight is", response.data);
           this.setState({
